@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml:1:1-45
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml:1:1-45
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml:1:1-45
+	package
+		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml:1:11-42
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml:1:1-45
+uses-sdk
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml
+		INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\domain\src\main\AndroidManifest.xml

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_student_list.xml",
+        "source": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\src\\main\\res\\layout\\fragment_student_list.xml"
+    },
+    {
+        "merged": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_student_details.xml",
+        "source": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\src\\main\\res\\layout\\fragment_student_details.xml"
+    },
+    {
+        "merged": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\person_item.xml",
+        "source": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\src\\main\\res\\layout\\person_item.xml"
+    },
+    {
+        "merged": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_person.xml",
+        "source": "F:\\AD02_09-2018\\AD02_09-2018-Class_2\\presentation\\src\\main\\res\\layout\\activity_person.xml"
+    }
+]

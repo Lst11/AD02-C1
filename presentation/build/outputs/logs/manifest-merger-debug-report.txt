@@ -6,7 +6,7 @@ INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\Android
 INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\AndroidManifest.xml:1:1-23:12
 MERGED from [com.android.databinding:adapters:3.1.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\adapters-3.1.2.aar\8d003f19f25f0ecd4947599ba9e8bdf4\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.databinding:library:3.1.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\library-3.1.2.aar\3085f8d07814bb27d12957f9c6f1ea1d\AndroidManifest.xml:17:1-24:12
-MERGED from [:data] F:\AD02_09-2018\AD02_09-2018-Class_2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:data] F:\AD02_09-2018\AD02_09-2018-Class_2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:domain] F:\AD02_09-2018\AD02_09-2018-Class_2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\c8447c305a934e667c61582089bf52ad\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d387c2eb320b5a7f8624473f5c98651f\AndroidManifest.xml:17:1-22:12
@@ -64,6 +64,8 @@ INJECTED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\Android
 		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\AndroidManifest.xml:4:5-67
+MERGED from [:data] F:\AD02_09-2018\AD02_09-2018-Class_2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-67
+MERGED from [:data] F:\AD02_09-2018\AD02_09-2018-Class_2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from F:\AD02_09-2018\AD02_09-2018-Class_2\presentation\src\main\AndroidManifest.xml:4:22-64
 application

@@ -35,7 +35,7 @@ class PersonDetailsViewModel : BaseViewModel<PersonRouter>() {
                             this.id = it.id
                             name.set(it.name)
                             surname.set(it.surname)
-                            imageUrl.set(it.url)
+                            imageUrl.set(it.imageUrl)
                         },
                         onError = {
                             isProgressEnabled.set(false)

@@ -37,7 +37,7 @@ class StudentListViewModel : BaseViewModel<PersonRouter>() {
                 .subscribeBy(
                         onNext = {
                             //FIXME передать данные в adapter
-                            adapter.items=studentListUseCase.get().blockingSingle()
+                            adapter.items = studentListUseCase.get().blockingSingle()
                             adapter?.notifyDataSetChanged()
 //                            adapter = PersonRecyclerViewAdapter(studentListUseCase.get().blockingSingle(), listener)
                             isProgressEnabled.set(false)

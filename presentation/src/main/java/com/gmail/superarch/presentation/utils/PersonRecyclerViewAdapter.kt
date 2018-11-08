@@ -49,7 +49,7 @@ class PersonRecyclerViewAdapter : RecyclerView.Adapter<ViewHolder>() {
                         .error(R.mipmap.ic_launcher)
 
                 Glide.with(itemView.context)
-                        .load(item.url)
+                        .load(item.imageUrl)
                         .listener(object : RequestListener<Drawable> {
                             override fun onLoadFailed(e: GlideException?, model: Any, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
                                 return false

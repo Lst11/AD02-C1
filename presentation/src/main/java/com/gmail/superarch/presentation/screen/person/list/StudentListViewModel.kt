@@ -8,7 +8,9 @@ import com.gmail.superarch.presentation.base.BaseViewModel
 import com.gmail.superarch.presentation.screen.person.PersonRouter
 import com.gmail.superarch.presentation.utils.ClickListener
 import com.gmail.superarch.presentation.utils.PersonRecyclerViewAdapter
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
+import io.reactivex.schedulers.Schedulers
 
 class StudentListViewModel : BaseViewModel<PersonRouter>() {
 
@@ -19,30 +21,30 @@ class StudentListViewModel : BaseViewModel<PersonRouter>() {
     private val searchStudentsUseCase = UseCaseProvider.provideSearchStudentUseCase()
 
 
-    //FIXME При клике на юзера вызывать router.goToStudentDetails()
     private val listener = object : ClickListener {
         override fun onClick(id: String) {
             router?.goToStudentDetails(id)
         }
     }
 
-    //FIXME поменять на свой adapter
     val adapter: PersonRecyclerViewAdapter = PersonRecyclerViewAdapter()
-
 
     init {
         adapter.listener = listener
         isProgressEnabled.set(true)
         val disposable = studentListUseCase.get()
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(
                         onNext = {
-                            //FIXME передать данные в adapter
-                            adapter.items = studentListUseCase.get().blockingSingle()
-                            adapter?.notifyDataSetChanged()
-//                            adapter = PersonRecyclerViewAdapter(studentListUseCase.get().blockingSingle(), listener)
+                            Log.e("aaa", "StudentListViewModel size of the list is: " + it.size)
+                            adapter.items = it
+                            adapter.notifyDataSetChanged()
                             isProgressEnabled.set(false)
                         },
-                        onError = {
+                        onError =
+                        {
+                            Log.e("aaa", "StudentListViewModel doOnError deletePerson: $it")
                             isProgressEnabled.set(false)
                             router?.showError(it)
                         }
@@ -56,14 +58,12 @@ class StudentListViewModel : BaseViewModel<PersonRouter>() {
 
         val studentSearch = PersonSearch(search)
         val disposable = searchStudentsUseCase.search(studentSearch)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(
                         onNext = {
-                            //FIXME передать данные в adapter
-                            var listFilt = searchStudentsUseCase.search(studentSearch).blockingSingle()
-                            adapter.items=listFilt
+                            adapter.items = it
                             adapter?.notifyDataSetChanged()
-//                            adapter = PersonRecyclerViewAdapter(searchStudentsUseCase.search(studentSearch).blockingSingle(), listener)
-                            Log.e("aaa", "The list after filtr is: $listFilt")
                         },
                         onError = {
                             router?.showError(it)
@@ -72,7 +72,7 @@ class StudentListViewModel : BaseViewModel<PersonRouter>() {
         addToDisposable(disposable)
     }
 
-    fun onClickAdd(){
+    fun onClickAdd() {
         router?.goToStudentDetails("")
     }
 }

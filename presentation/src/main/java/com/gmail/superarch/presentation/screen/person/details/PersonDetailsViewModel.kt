@@ -2,6 +2,7 @@ package com.gmail.superarch.presentation.screen.person.details
 
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
+import android.os.Handler
 import android.util.Log
 import com.gmail.superarch.fuctories.UseCaseProvider
 import com.gmail.superarch.presentation.base.BaseViewModel
@@ -28,16 +29,17 @@ class PersonDetailsViewModel : BaseViewModel<PersonRouter>() {
 
         studentId = id
 
-        //FIXME Тут будет вызо UseCase, который возвращает одного студента по id
         val disposable = useCases.provideGetPersonUseCase().getById(id)
                 ?.subscribeBy(
                         onNext = {
+                            Log.e("aaa", "Person is ${it.name} ${it.surname}")
                             this.id = it.id
-                            name.set(it.name)
-                            surname.set(it.surname)
-                            imageUrl.set(it.imageUrl)
+                            this.name.set(it.name)
+                            this.surname.set(it.surname)
+                            this.imageUrl.set(it.imageUrl)
                         },
                         onError = {
+                            Log.e("aaa", "PersonDetailsViewModel error: $it")
                             isProgressEnabled.set(false)
                             router?.showError(it)
                         }
@@ -50,11 +52,24 @@ class PersonDetailsViewModel : BaseViewModel<PersonRouter>() {
                 ?: "", imageUrl.get() ?: "")
         Log.e("aaa", "Changing data is: $person")
         useCases.provideUpdateStudentUseCase().update(person)
-        router?.goToStudentList()
+                ?.subscribeBy(
+                        onError = { Log.e("aaa", "PersonDetailsViewModel onClickSave onError: $it") },
+                        onComplete = {
+                            Log.e("aaa", "PersonDetailsViewModel onClickSave onComplete")
+                            Handler().postDelayed({}, 120)
+                            router?.goToStudentList()
+                        })
     }
 
     fun onClickDelete() {
         useCases.provideDeleteStudentUseCase().delete(id)
-        router?.goToStudentList()
+                ?.subscribeBy(
+                        onError = { Log.e("aaa", "PersonDetailsViewModel onClickDelete onError: $it") },
+                        onComplete = {
+                            Log.e("aaa", "PersonDetailsViewModel onClickDelete onComplete")
+                            Handler().postDelayed({}, 120)
+                            router?.goToStudentList()
+                        })
     }
 }
+

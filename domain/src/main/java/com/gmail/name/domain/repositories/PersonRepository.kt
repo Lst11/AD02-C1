@@ -9,7 +9,6 @@ interface PersonRepository : BaseRepository {
 
     fun get() : Observable<List<Person>>
 
-    //FIXME Реализовать возможность получить одного студента по id
     fun getById(id: String) : Observable<Person>?
 
     fun search(search: PersonSearch) : Observable<List<Person>>
